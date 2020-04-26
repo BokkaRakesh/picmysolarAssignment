@@ -1,0 +1,370 @@
+/* ------------------------------ BREAK-POINTS ------------------------------ */
+$breakpoint-xs: "screen and (min-width:240px) and (max-width: 599px)";
+$breakpoint-sm: "screen and (min-width:600px) and (max-width: 767px)";
+$breakpoint-md: "screen and (min-width:768px) and (max-width: 991px)";
+$breakpoint-lg: "screen and (min-width:991px) and (max-width: 1366px)";
+/* ------------------------------ MOBILE-PHONES (min-width:240px) and (max-width: 599px) ----------------------------- */
+@media #{$breakpoint-xs}{
+  .body-card{
+   width: 100% !important;
+ }
+ .bottom-box{
+  .body-inner-card{
+    .card-header{
+      width: 100% !important;
+     }
+  }
+ }
+
+.search-box{
+  justify-content: inherit !important;
+  .search-card{
+    width: 100% !important;
+  }
+  .cardadd-right{
+    width: 100% !important;
+    justify-content: flex-end;
+    display: flex;
+  }
+}
+.custom-boxes{
+  width: auto !important;
+}
+.bread-crumb-right {
+  margin-top: 5px !important;
+}
+.master-login {
+  height: auto !important;
+  .login-left {
+    padding: 25px !important;
+    height: auto !important;
+    .login-logo{
+      width: 125px;
+    }
+    h2{
+      font-size: 24px !important;
+
+    }
+    p{
+      max-width: 100% !important;
+      line-height: 25px;
+    }
+  }
+
+  .login-right {
+    padding: 10px 25px 0px !important;
+    width: 100%;
+    height: auto !important;
+
+    h2 {
+
+    }
+    .remember-forgot-box {
+      font-size: 14px;
+      letter-spacing: 0.5px;
+      cursor: pointer;
+
+      .mat-checkbox-label {}
+
+      a {
+        color: #039be5;
+      }
+    }
+
+    .login-btn {
+      width: 80%;
+      margin: 10px auto !important;
+    }
+  }
+
+}
+}
+/* ------------------------------ IPAD-TABLTES (min-width:600px) and (max-width: 767px) ------------------------------ */
+@media #{$breakpoint-sm}{
+ .body-card{
+   width: 95% !important;
+ }
+ .bottom-box{
+  .body-inner-card{
+    .card-header{
+      width: 90% !important;
+     }
+  }
+ }
+
+ .card-sides {
+  .user-card {
+    .card-img{
+      img{
+        border-radius: 50%;
+        width: auto !important;
+        height: auto !important;
+      }
+    }
+
+  }
+
+}
+.custom-boxes{
+  width: auto !important;
+}
+.bread-crumb-right {
+  margin-top: 5px !important;
+}
+.table-responsive {
+  width: 100%;
+  margin-bottom: 15px;
+  overflow-y: hidden;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+  border: 1px solid #ddd;
+}
+.master-login {
+  height: 100vh !important;
+  .login-left {
+    flex: 1 1 100%;
+    max-width: 50% !important;
+    padding: 20px !important;
+    h2{
+      font-size: 24px !important;
+    }
+  }
+  .login-right {
+    flex: 1 1 100%;
+    max-width: 50% !important;
+    padding: 128px 15px 48px !important;
+  }
+}
+.master-login.master-forgot-pwd {
+  height: 100%!important;
+}
+}
+/* ----------------------- IPAD-HORIZONTAL-LAPTOPS-TABLTES-(min-width:768px) and (max-width: 991px) ------------------- */
+@media #{$breakpoint-md}{
+  .body-card{
+    width: 95% !important;
+  }
+  .master-login {
+    height: 100vh !important;
+    .login-left {
+      flex: 1 1 100%;
+      max-width: 50% !important;
+      padding: 20px !important;
+      h2{
+        font-size: 24px !important;
+      }
+    }
+    .login-right {
+      flex: 1 1 100%;
+      max-width: 50% !important;
+      padding: 128px 15px 48px !important;
+      align-items: center;
+      .login-form-box {
+        width: 100%;
+    display: block !important;
+      }
+    }
+  }
+ }
+/* -------------------------- IPAD-HORIZONTAL-LAPTOPS-TABLTES-(min-width:992px) and (max-width: 1365px) --------------- */
+ @media #{$breakpoint-lg}{
+  .master-login {
+    // height: auto !important;
+    .login-left {
+    }
+    .login-right {
+      padding: 128px 20px 48px !important;
+      .login-form-box {
+        width: 100%;
+    display: block !important;
+      }
+    }
+  }
+
+ }
+
+/* ------------------------------CUSTOM- BREAK-POINTS ------------------------------ */
+ @media screen and (min-width: 320px) and (max-width: 479px)   {
+  .main-content{
+  .view-modal{
+    .view-modal-container{
+      padding: 10px;
+      display:block !important;
+      .fixed-label{
+        width: 180px;
+        margin-bottom: 6px;
+      }
+    }
+ }
+ .view-modal-basic {
+  .view-modal-container{
+    display: block !important;
+    .fixed-label{
+      width: 180px;
+      margin-bottom: 6px;
+    }
+  }
+ }
+
+ .card-sides {
+  .user-card {
+    .card-img{
+      img{
+        border-radius: 50%;
+        width: auto !important;
+        height: auto !important;
+      }
+    }
+
+  }
+
+}
+.custom-boxes{
+  width: auto !important;
+}
+
+
+
+
+
+
+
+
+
+}
+.master-login {
+  .login-right{
+    padding: 10px 18px 15px !important;
+  }
+}
+.master-forgot-pwd{
+  .login-right{
+    padding: 60px 15px 48px !important;
+  }
+}
+
+
+
+
+ }
+ @media screen and (max-width: 375px) and (min-width:375px){
+  .master-login{
+    .login-right {
+      padding: 10px 25px 96px !important;
+  }
+  }
+  .master-login.master-forgot-pwd {
+    height: 100vh !important;
+}
+
+
+}
+@media screen and (min-width: 480px) and (max-width: 599px) {
+  .master-login.master-forgot-pwd {
+    height:auto!important;
+    .login-right{
+      height: 100%!important;
+      padding: 128px 48px 48px !important;
+
+    }
+}
+
+}
+/* ---------------------------- FOR-PIXEL-DEVICE ---------------------------- */
+
+ @media screen and (max-width: 411px) and (min-width: 411px){
+.master-login{
+  .login-right {
+    padding: 10px 25px 131px !important;
+}
+}
+.master-forgot-pwd{
+  .login-right{
+    padding: 60px 15px 48px !important;
+    padding-bottom: 230px !important;
+  }
+}
+
+
+}
+/* ---------------------------- FOR-I PHONE-6-7-8-PLUS-DEVICE ---------------------------- */
+
+@media screen and (max-width: 414px) and (min-width: 414px){
+  .master-login{
+    .login-right {
+      padding: 10px 25px 44px !important;
+  }
+  }
+  .master-forgot-pwd{
+    .login-right{
+      padding: 60px 15px 48px !important;
+      padding-bottom: 135px !important;
+    }
+  }
+
+
+  }
+  /* ---------------------------- FOR-I PHONE-10-DEVICE ---------------------------- */
+
+
+
+
+/* ------------------------ MATERIAL-TABLE-RESPONSIVE ----------------------- */
+
+@media screen and (max-width: 960px) {
+  .mat-table {
+    border: 0;
+    vertical-align: middle
+  }
+
+  .mat-table caption {
+    font-size: 1em;
+  }
+
+  /*  Enable this to hide header
+  .mat-table .mat-header-cell {
+
+    border: 10px solid;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+  }
+  */
+  .mat-table .mat-row {
+    // border-bottom: 5px solid #ddd;
+    // display: block;
+  }
+  /*
+  .mat-table .mat-row:nth-child(even) {background: #CCC}
+  .mat-table .mat-row:nth-child(odd) {background: #FFF}
+  */
+  .mat-table .mat-cell {
+    // border-bottom: 1px solid #ddd;
+    // display: block;
+    // font-size: 1em;
+    // text-align: right;
+    // font-weight: bold;
+    // height:30px;
+    // margin-bottom: 4%;
+  }
+  .mat-table .mat-cell:before {
+    /*
+    * aria-label has no advantage, it won't be read inside a table
+    content: attr(aria-label);
+    */
+    content: attr(data-label);
+    float: left;
+    text-transform: uppercase;
+    font-weight: normal;
+
+    font-size: .85em;
+  }
+  .mat-table .mat-cell:last-child {
+    // border-bottom: 0;
+  }
+    .mat-table .mat-cell:first-child {
+    margin-top: 4%;
+  }
+}

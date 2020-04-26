@@ -1,0 +1,39 @@
+@import '../../../../../assets/css/colors';
+
+// :host {
+//   display: flex;
+//   flex-direction: column;
+//   outline: none;
+//   width: 100%;
+
+//   .mat-list-item.active {
+//     background-color: $color-primary-50;
+//   }
+
+//   &:hover,
+//   &:focus {
+//     >.mat-list-item:not(.expanded) {
+//       // background-color: $color-primary-100 !important;
+//     }
+//   }
+// }
+
+// .mat-list-item {
+//   padding: 8px 0;
+//   display: flex;
+//   width: auto;
+
+//   .routeIcon {
+//     margin-right: 40px;
+//   }
+// }
+
+
+
+// [_nghost-c7]:hover > .mat-list-item[_ngcontent-c7]:not(.expanded), [_nghost-c7]:focus > .mat-list-item[_ngcontent-c7]:not(.expanded) {
+//   background-color: transparent;
+//   width: 95%;
+//   border-top-right-radius: 34px;
+//   height: 45px;
+//   border-bottom-right-radius: 34px;
+// }

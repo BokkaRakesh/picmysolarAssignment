@@ -1,0 +1,23 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import '~@angular/material/theming';
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500');
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
+@include mat-core();
+$bizmate-primary: mat-palette($mat-purple);
+$bizmate-accent: mat-palette($mat-blue-grey,
+A200,
+A100,
+A400);
+$bizmate-warn: mat-palette($mat-red);
+$bizmate-theme: mat-light-theme($bizmate-primary,
+$bizmate-accent,
+$bizmate-warn);
+@include angular-material-theme($bizmate-theme);
+@import './assets/css/colors';
+@import './assets/css/responsive';
+@import './assets/css/mixins';
+@import './assets/css/reset';
+@import './assets/css/custom';
+@import '~perfect-scrollbar/css/perfect-scrollbar.css';

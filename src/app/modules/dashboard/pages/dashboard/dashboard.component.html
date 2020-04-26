@@ -1,0 +1,83 @@
+<mat-sidenav-container class="sidenav-container main-nav" autosize>
+  <mat-sidenav class="sidenav nav-sidemenu" #sidenav [ngStyle]="{ 'width.px': sideNavWidth }" mode="side"
+    [opened]="navStatus" (mouseenter)="increase()" (mouseleave)="decrease()">
+    <mat-list>
+
+      <mat-list-item class="logo settings-menu">
+        <mat-icon aria-hidden="false" aria-label="Example home icon">home</mat-icon>
+        <!-- <i class="material-icons" [routerLink]="['/routePath']">
+          <img src="../../../../../assets/images/loopImages/loopside1.svg" alt="" style="width: 30px"></i> -->
+        <span [routerLink]="['/home']" class="setting-text">Home</span>
+
+
+      </mat-list-item>
+      <mat-list-item class="logo settings-menu">
+        <mat-icon aria-hidden="false" aria-label="Example AccountCircle icon"><span class="material-icons">
+            account_circle
+          </span></mat-icon>
+        <!-- <i class="material-icons" [routerLink]="['/routePath']">
+          <img src="../../../../../assets/images/loopImages/loopside2.svg" alt="" style="width: 30px"></i> -->
+        <span [routerLink]="['/routePath']" class="setting-text">{{this.userName | uppercase}}</span>
+      </mat-list-item>
+
+    </mat-list>
+  </mat-sidenav>
+
+  <mat-sidenav-content class="page-wrap">
+    <mat-toolbar class="top-nav">
+      <mat-toolbar-row>
+        <span>
+          <button mat-icon-button (click)="sidenav.toggle()" class="toggle-btn">
+            <mat-icon>menu</mat-icon>
+          </button>
+        </span>
+        <span fxFlex></span>
+        <span>
+          <i class="material-icons notification-icon" (click)="notificationShow();">notifications</i>
+          <button mat-button [matMenuTriggerFor]="userMenu" class="user-button admin-profile">
+            <div fxLayout="row" fxLayoutAlign="center center">
+              <img class="avatar mr-0 mr-sm-16"
+                src="https://boostchiropractic.co.nz/wp-content/uploads/2016/09/default-user-img.jpg" />
+              <div class="admin-email">
+                <span class="username mr-12" fxHide fxShow.gt-sm>{{this.userName}}</span>
+                <mat-icon class="s-16" fxHide.xs>keyboard_arrow_down</mat-icon>
+              </div>
+            </div>
+          </button>
+          <mat-menu #userMenu="matMenu" [overlapTrigger]="false">
+
+            <button mat-menu-item>
+              <mat-icon>account_circle</mat-icon>
+              <span>My Profile</span>
+            </button>
+
+            <button mat-menu-item class="">
+              <mat-icon>mail</mat-icon>
+              <span>Inbox</span>
+            </button>
+
+            <button (click)="logout()" mat-menu-item class="">
+              <mat-icon>exit_to_app</mat-icon>
+              <span>Logout</span>
+            </button>
+
+          </mat-menu>
+
+          <i class="material-icons notification-icon right-list-icon d-none">list</i>
+        </span>
+        <!-- <span>
+          <button mat-stroked-button color="primary" (click)="logout()">Log out</button>
+        </span> -->
+      </mat-toolbar-row>
+    </mat-toolbar>
+
+    <main class="content">
+      <router-outlet></router-outlet>
+    </main>
+
+    <!-- <footer>
+      <h2>Sticky Footer !!</h2>
+      <p>with variable height</p>
+    </footer> -->
+  </mat-sidenav-content>
+</mat-sidenav-container>

@@ -1,0 +1,137 @@
+/* -------------------------- FONT-FAMILY-IMPORTING ------------------------- */
+
+@import "https://fonts.googleapis.com/css?family=Muli:400,400i,600,600i,700,700i";
+
+/* -------------------------------- HTML-SCSS ------------------------------- */
+
+$fontFamily: 'Roboto',
+sans-serif;
+$fontFamily-Google: 'GoogleSansRegular';
+$baseFont: 14px;
+$baseLineHeight:25px;
+$bodyBg:#ECEFF1;
+
+/* -------------------------------- BODY-SCSS ------------------------------- */
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    height: 100%;
+    font-family: $fontFamily;
+    font-size: $baseFont;
+    background: $bodyBg;
+    -webkit-font-smoothing: antialiased;
+}
+
+@font-face {
+    font-family: GoogleSansRegular;
+    src: url("src/assets/fonts/GoogleSans-Regular.ttf") format("truetype");
+}
+
+
+/* ------------------------------ FONT-WEIGHTS ------------------------------ */
+
+.fw-500 {
+    font-weight: 500;
+}
+
+.fw-600 {
+    font-weight: 600;
+}
+
+$fw-400: 400;
+$fw-400: 400;
+$fw-500: 500;
+$fw-600:600;
+
+/* ---------------------------- BACKGROUND-COLORS --------------------------- */
+
+$primarColor: #4E1F8A;
+$color-primary: #03A9F4;
+$color-primary-50: #e3f2fd;
+$color-primary-100: #bbdefb;
+$color-primary-dark: #4E1F8A;
+$color-accent: #607D8B;
+$color-blue: #0000FF;
+$globalBg:#4E1F8A;
+$globalColor:#4E1F8A;
+$globalBorder:#4E1F8A;
+$globalRadius: 8px;
+$globalTransition:color .9s ease-out,
+border-color .5s ease-out,
+background-color .9s ease-out;
+$textColor:#0000008a;
+$headingColor: #000000de;
+$headingBlue:#4E1F8A;
+$headingWhite:#ffffff;
+$CardBgWhite:#ffffff;
+$CardBgBlue:#4E1F8A;
+$cardHeadBg:#f5f5f5;
+$cardBg: #f5f5f5;
+
+/* --------------------------- BUTTON-BACKGROUNDS --------------------------- */
+
+$btnColor:#222222;
+$btnColorBlue:#4E1F8A;
+$btnBg: #4E1F8A;
+$btnBgGray: #f5f5f5;
+// $cancelBtnBg:#2d323ef0;
+$addBtnBg:#3170E0;
+$cancelBtnBg:#FFFFFF;
+
+/* ----------------------------- ANCHORTAG-SCSS ----------------------------- */
+
+$linkColor:#222222;
+$linkActive:#4E1F8A;
+
+/* ------------------------------ BORDERS-SCSS ------------------------------ */
+
+$primaryRadius50: 50%;
+$brColorBlue: #4E1F8A;
+$brColorGray: #f5f5f5;
+$brColor: #cccccc;
+
+/* ------------------------------ DROPDOWN-SCSS ----------------------------- */
+
+$dropDownBg:#4E1F8A;
+$dropDownHover:#42B4EC;
+
+/* ----------------------------- NAV-BACKGROUNDS ---------------------------- */
+
+$topNavBg:#d9dee0;
+$logoBg:#262f3d;
+$footerBg:#1e2129;
+$sideNavBg:#40107E;
+$light: #f8f9fa;
+$dark: #343a40;
+
+/* ---------------------------- COLORS-CODES --------------------------- */
+
+$black: #222222;
+$blue: #40107E;
+$indigo: #6610f2;
+$purple: #6f42c1;
+$pink: #e83e8c;
+$red: #dc3545;
+$orange: #fd7e14;
+$yellow: #ffc107;
+$green: #28a745;
+$teal: #20c997;
+$cyan: #17a2b8;
+$white: #fff;
+$gray: #6c757d;
+$gray-dark: #343a40;
+$gray-light:#eeeeee;
+$primary: #40107E;
+$secondary: #6c757d;
+$success: #28a745;
+$info: #17a2b8;
+$warning: #ffc107;
+$danger: #dc3545;

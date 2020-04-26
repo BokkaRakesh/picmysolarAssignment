@@ -1,0 +1,247 @@
+@import './colors';
+@mixin transition {
+    transition: color 500ms ease-in-out 0s, background-color 800ms ease-in-out 0s;
+}
+
+@mixin hover {
+    background: #42B4EC;
+}
+
+@mixin brRadius {
+    border-radius: 8px;
+}
+
+
+/* ------------------------------ GLOBAL-BUTTON ----------------------------- */
+
+@mixin global-btn-blue {
+    // border: 0px solid transparent !important;
+    font-weight: 500 !important;
+    padding: 0px 15px !important;
+    font-size: 14px !important;
+    // border-radius: 25px !important;
+    letter-spacing: .25px !important;
+    position: relative !important;
+    overflow: hidden !important;
+    color: $white;
+    background-color: $btnBg;
+    border-color: $btnBg;
+    text-transform: capitalize;
+    -webkit-box-shadow: 0 0 0 1px rgba(0, 0, 0, .12) inset;
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, .12) inset;
+    transition: color .5s ease-in-out, background-color .5s ease-in-out, border-color .15s ease-in-out, box-shadow .5s ease-in-out !important;
+    &:hover {
+        color: $white !important;
+        background-color: black !important;
+        border-color: !important;
+    }
+}
+
+
+/* ---------------------------- GLOBAL-ADD-BUTTON --------------------------- */
+
+@mixin add-button {
+    font-weight: 500;
+    padding: 0px 15px!important;
+    // font-family: $fontFamily-Google;
+    font-size: 14px;
+    border-radius: 25px !important;
+    letter-spacing: 0.5px;
+    position: relative !important;
+    overflow: hidden !important;
+    color: $textColor;
+    background-color: #E6EFFF;
+    border-color: #3170e0;
+    text-transform: capitalize;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    transition: color .5s ease-in-out, background-color .5s ease-in-out, border-color .15s ease-in-out, box-shadow .5s ease-in-out !important;
+    &:hover {
+        color: $white !important;
+        background-color: #039be5 !important;
+        border-color: #039be5 !important;
+    }
+}
+
+
+/* ---------------------------- GLOBAL-CANCEL-BUTTON --------------------------- */
+
+@mixin cancel-button {
+    border: 0px !important;
+    font-weight: 500;
+    padding: 0px 15px!important;
+    // font-family: $fontFamily-Google;
+    font-size: 14px;
+    border-radius: 25px !important;
+    letter-spacing: 0.5px;
+    position: relative !important;
+    overflow: hidden !important;
+    color: $textColor !important;
+    background-color: $cancelBtnBg;
+    border-color: $white;
+    text-transform: capitalize;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    transition: color .5s ease-in-out, background-color .5s ease-in-out, border-color .15s ease-in-out, box-shadow .5s ease-in-out !important;
+    &:hover {
+        color: #3170E0 !important;
+        background-color: #F3F7FF !important;
+        box-shadow: 0 0 0 1px #F3F7FF inset !important;
+        opacity: 1 !important;
+    }
+}
+
+
+/* ------------------------------- EDIT-BUTTON ------------------------------ */
+
+.edit-btn {
+    background-color: #fff;
+    position: relative !important;
+    width: 35px !important;
+    height: 35px !important;
+    line-height: 35px !important;
+    border-radius: 25px !important;
+    text-align: center !important;
+    padding: 0px !important;
+    color: $textColor;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, border 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    i {
+        font-size: 18px;
+        font-weight: 600;
+    }
+    &:hover {
+        background-color: #F3F7FF;
+    }
+}
+
+
+/* ------------------------------ DELETE-BUTTON ----------------------------- */
+
+.delete-btn {
+    background-color: #fff;
+    position: relative !important;
+    width: 35px !important;
+    height: 35px !important;
+    line-height: 35px !important;
+    border-radius: 25px !important;
+    text-align: center !important;
+    padding: 0px !important;
+    color: $textColor;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, border 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    i {
+        font-size: 18px;
+        font-weight: 600;
+    }
+    &:hover {
+        background-color: #F3F7FF;
+    }
+}
+
+
+/* --------------------- ALL-BUTTONS-HOVER-BEFORE-AFTER --------------------- */
+
+.global-btn::before,
+.global-btn::after,
+.global-btn-gray::before,
+.global-btn-gray::after,
+.global-btn::before,
+.add-btn::before,
+.add-btn::after,
+.cancel-btn::before,
+.cancel-btn::after {
+    position: absolute !important;
+    content: '' !important;
+    top: 0 !important;
+    height: 100% !important;
+    left: -25% !important;
+    width: 0 !important;
+    background-color: $white !important;
+    -webkit-transform: skew(50deg)!important;
+    transform: skew(50deg) !important;
+    -webkit-transition: .4s !important;
+    -ms-transition: .4s;
+    -o-transition: .4s;
+    -moz-transition: .4s;
+    transition: .4s;
+}
+
+.global-btn::after,
+.global-btn-gray::after,
+.add-btn::after,
+.cancel-btn::after {
+    left: auto !important;
+    right: -25% !important;
+}
+
+.global-btn:hover::before,
+.global-btn:focus::before,
+.global-btn:hover::after,
+.global-btn:focus::after,
+.global-btn-gray:hover::before,
+.global-btn-gray:focus::before,
+.global-btn-gray:hover::after,
+.global-btn-gray:focus::after,
+.add-btn:hover::before,
+.add-btn:focus::before,
+.add-btn:hover::after,
+.add-btn:focus::after,
+.cancel-btn:hover::before,
+.cancel-btn:focus::before,
+.cancel-btn:hover::after,
+.cancel-btn:focus::after {
+    width: 100% !important;
+    background-color: transparent !important;
+}
+
+// .global-btn-gray::before, .global-btn-gray::after {
+//   position: absolute !important;
+//   content: '' !important;
+//   top: 0 !important;
+//   height: 100% !important;
+//   left: -25% !important;
+//   width: 0 !important;
+//   background-color: $white !important;
+//   -webkit-transform: skew(50deg)!important;
+//   transform: skew(50deg) !important;
+//   -webkit-transition: .4s !important;
+//   -ms-transition: .4s;
+//   -o-transition: .4s;
+//   -moz-transition: .4s;
+//   transition: .4s;
+// }
+// .global-btn-gray::after {
+//   left: auto !important;
+//   right: -25% !important;
+// }
+// .global-btn-gray:hover::before,
+// .global-btn-gray:focus::before,
+// .global-btn-gray:hover::after,
+// .global-btn-gray:focus::after {
+//   width: 100% !important;
+//   background-color: transparent !important;
+// }
+
+/* ----------------------------- GLOBAL-BTN-GRAY ---------------------------- */
+
+@mixin global-btn-gray {
+    border: 0px solid transparent !important;
+    font-weight: 500 !important;
+    padding: 0px 15px !important;
+    font-size: 14px !important;
+    border-radius: 8px !important;
+    letter-spacing: .25px !important;
+    position: relative;
+    overflow: hidden;
+    color: $textColor;
+    background-color: $btnBgGray;
+    border-color: $btnBg;
+    text-transform: capitalize;
+    -webkit-box-shadow: 0 0 0 1px rgba(0, 0, 0, .12) inset;
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, .12) inset;
+    transition: color .5s ease-in-out, background-color .5s ease-in-out, border-color .5s ease-in-out, box-shadow .5s ease-in-out !important;
+    &:hover {
+        color: $white !important;
+        background-color: #f7fbfd !important;
+        border-color: #039be5 !important;
+    }
+}

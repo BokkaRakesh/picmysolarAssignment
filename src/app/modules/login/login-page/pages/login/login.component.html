@@ -1,0 +1,69 @@
+<!-- ------------------------------ ROW START ------------------------------ -->
+<div class="master-login" fxLayout="row" fxLayout.lg="row" fxLayout.md="row" fxLayout.sm="row" fxLayout.xs="column"
+  fxLayoutAlign="center center">
+
+  <div class="login-content" fxFlex="30" fxLayout="column">
+
+    <form [formGroup]="loginForm">
+      <!-- <img src="/assets/images/logo.png" alt=""> -->
+      <h2 class="title">Login To Your Account</h2>
+
+      <!-- -------------------------------- Email START -------------------------------- -->
+      <div fxLayout="column" fxLayout.lg="column" fxLayout.md="column" fxLayout.sm="column" fxLayout.xs="column"
+        fxFlexFill>
+        <mat-form-field appearance="outline">
+          <mat-label>Email*</mat-label>
+          <mat-icon matPrefix class="input-icon">email</mat-icon>
+          <input matInput type="email" formControlName="email" />
+          <mat-error *ngIf="email.invalid && (email.dirty || email.touched)">
+            <span>Email is required</span>
+          </mat-error>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+          <mat-label>Password*</mat-label>
+          <mat-icon matPrefix class="input-icon">lock</mat-icon>
+          <input matInput type="password" formControlName="password" />
+          <mat-error *ngIf="password.invalid && (password.dirty || password.touched)">
+            <span>Password is required</span>
+          </mat-error>
+        </mat-form-field>
+      </div>
+
+      <!-- --------------------------------- Email END --------------------------------- -->
+
+      <!-- ---------------------- REMEMBER-FORGOT-PASSWORD ----------------------- -->
+
+      <div class="remember-forgot-box" fxLayout="row" fxLayout.lg="row" fxLayout.md="row" fxLayout.sm="row"
+        fxLayout.xs="row" fxLayoutAlign="start start" fxLayoutGap="8px">
+        <div fxLayout="column" fxFlex="50" fxFlexFill fxLayoutAlign="start start">
+
+
+        </div>
+        <div fxLayout="column" fxFlex="50" fxFlexFill fxLayoutAlign="start end">
+          <a routerLink="forgot-password"> Forgot Password?</a>
+        </div>
+      </div>
+
+      <!-- ---------------------------- LOGIN-BUTTON ----------------------------- -->
+
+      <button class="login-btn" mat-button (click)="login()" [disabled]="loginForm.invalid">
+        Login
+      </button>
+      <!--- <div class="create-account-here">
+                <p>Don't have an account?</p>
+                <p><a routerLink="/register">Create an account</a></p>
+            </div>-->
+    </form>
+
+    <!-- ------------------------------ COLUMN END ------------------------------ -->
+  </div>
+
+</div>
+<div fxLayout="row" fxLayout.lg="row" fxLayout.md="row" fxLayout.sm="row" fxLayout.xs="column"
+  fxLayoutAlign="start stretch" fxLayoutGap="8px">
+  <div fxLayout="column" fxFlex="100" fxFlexFill>
+    <router-outlet></router-outlet>
+  </div>
+</div>
+
+<!-- ------------------------------ ROW END ------------------------------ -->

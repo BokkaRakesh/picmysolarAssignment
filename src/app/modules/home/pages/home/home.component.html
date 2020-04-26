@@ -1,0 +1,24 @@
+<!-- -------------------------------- FieldName START -------------------------------- -->
+<section>
+  <div fxLayout="row" fxLayout.lg="row" fxLayout.md="row" fxLayout.sm="row" fxLayout.xs="column" fxLayoutAlign="center"
+    fxLayoutGap="8px">
+    <div fxLayout="column" fxFlex="80" class="custom-class">
+      <mat-form-field appearance="outline">
+        <mat-label>Search Address*</mat-label>
+        <mat-icon matPrefix class="input-icon">icon</mat-icon>
+        <input matInput placeholder="search for location" autocorrect="off" autocapitalize="off" spellcheck="off"
+          type="text" class="form-control" #search>
+        <!-- <mat-error *ngIf="formControlName.invalid && ( formControlName.dirty || formControlName.touched )">
+   <span>FieldName is required</span>
+   </mat-error> -->
+      </mat-form-field>
+      <button mat-button (click)="onClick()">Login</button>
+    </div>
+
+  </div>
+  <!-- routerLink="/home/login/login" -->
+  <router-outlet></router-outlet>
+</section>
+
+
+<!-- --------------------------------- FieldName END --------------------------------- -->
