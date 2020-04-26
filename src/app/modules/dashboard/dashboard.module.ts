@@ -1,12 +1,11 @@
-import { NgModule } from "@angular/core";
-import { CommonModule } from "@angular/common";
+import {NgModule} from '@angular/core';
+import {CommonModule} from '@angular/common';
 
-import { DashboardRoutingModule } from "./dashboard-routing.module";
-import { DashboardComponent } from "./pages/dashboard/dashboard.component";
+import {DashboardRoutingModule} from './dashboard-routing.module';
+import {DashboardComponent} from './pages/dashboard/dashboard.component';
 
-import { SharedModule } from "src/app/shared/shared.module";
-import { SideNavItemComponent } from "./components/side-nav-item/side-nav-item.component";
-import { SideNavService } from "./components/side-nav-item/side-nav/side-nav.service";
+import {SharedModule} from 'src/app/shared/shared.module';
+
 import {
   MatIconModule,
   MatSidenavModule,
@@ -14,24 +13,19 @@ import {
   MatListModule,
   MatToolbarModule,
   MatMenuModule,
-  MatButtonModule
-} from "@angular/material";
+  MatButtonModule,
+} from '@angular/material';
+import {CustomMaterialModule} from 'src/app/shared/custom-material.module';
 
 @NgModule({
-  declarations: [DashboardComponent, SideNavItemComponent],
+  declarations: [DashboardComponent],
   imports: [
     CommonModule,
     DashboardRoutingModule,
     SharedModule,
-    MatIconModule,
-    MatSidenavModule,
-    MatExpansionModule,
-    MatListModule,
-    MatToolbarModule,
-    MatMenuModule,
-    MatButtonModule
+    CustomMaterialModule,
   ],
 
-  providers: [SideNavService]
+  providers: [],
 })
 export class DashboardModule {}

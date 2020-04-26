@@ -6,19 +6,27 @@
       <mat-form-field appearance="outline">
         <mat-label>Search Address*</mat-label>
         <mat-icon matPrefix class="input-icon">icon</mat-icon>
-        <input matInput placeholder="search for location" autocorrect="off" autocapitalize="off" spellcheck="off"
-          type="text" class="form-control" #search>
-        <!-- <mat-error *ngIf="formControlName.invalid && ( formControlName.dirty || formControlName.touched )">
-   <span>FieldName is required</span>
-   </mat-error> -->
+        <input matInput type="text" class="form-control" (keydown.enter)="$event.preventDefault()"
+          placeholder="Search Nearest Location" autocorrect="off" autocapitalize="off" spellcheck="off" type="text"
+          #search>
       </mat-form-field>
       <button mat-button (click)="onClick()">Login</button>
+      <!-- --------------------------------- FieldName END --------------------------------- -->
+      <!-- --------------------------------- map --------------------------------- -->
+      <div fxLayout="row" fxLayout.lg="row" fxLayout.md="row" fxLayout.sm="row" fxLayout.xs="column"
+        fxLayoutAlign="center stretch" fxLayoutGap="8px">
+        <div fxLayout="column" fxFlex="80" fxFlexFill>
+          <agm-map [latitude]="latitude" [longitude]="longitude" [zoom]="zoom">
+            <agm-marker [latitude]="latitude" [longitude]="longitude" [markerDraggable]="true"
+              (dragEnd)="markerDragEnd($event)">
+            </agm-marker>
+          </agm-map>
+        </div>
+      </div>
     </div>
 
   </div>
+
   <!-- routerLink="/home/login/login" -->
   <router-outlet></router-outlet>
 </section>
-
-
-<!-- --------------------------------- FieldName END --------------------------------- -->

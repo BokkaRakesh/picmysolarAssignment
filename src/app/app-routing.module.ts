@@ -1,21 +1,20 @@
-import { NgModule } from "@angular/core";
-import { Routes, RouterModule } from "@angular/router";
-import { LoginComponent } from "./modules/login/login-page/pages/login/login.component";
-import { LoginModule } from "./modules/login/login-page/login.module";
+import {NgModule} from '@angular/core';
+import {Routes, RouterModule} from '@angular/router';
+import {LoginModule} from './modules/login/login-page/login.module';
 
 const routes: Routes = [
-  { path: "", redirectTo: "/home", pathMatch: "full" },
+  {path: '', redirectTo: '/home', pathMatch: 'full'},
   {
-    path: "home",
-    loadChildren: "./modules/home/home.module#HomeModule",
+    path: 'home',
+    loadChildren: './modules/home/home.module#HomeModule',
   },
   {
-    path: "login",
-    loadChildren: "./modules/login/login-page/login.module",
+    path: 'login',
+    loadChildren: './modules/login/login-page/login.module',
   },
   {
-    path: "dashboard",
-    loadChildren: "./modules/dashboard/dashboard.module#DashboardModule",
+    path: 'dashboard',
+    loadChildren: './modules/dashboard/dashboard.module#DashboardModule',
   },
 ];
 

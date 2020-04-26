@@ -4,8 +4,8 @@
 
 export const environment = {
   production: false,
-  GOOGLE_MAPS_API_KEY: "AIzaSyAzwRDOIWaOsBIXzql7u8SFIBc28Fq5gmI",
+  GOOGLE_MAPS_API_KEY: 'AIzaSyBjfV7yVo9IfovvviqsvFCnSubbWAarz84',
   // GOOGLE_MAPS_API_KEY: 'AIzaSyBw03bFpiEgAcfBfUH_dhSIgMWC5UPINcY'
 };
 
-import "zone.js/dist/zone-error";
+import 'zone.js/dist/zone-error';

@@ -1,20 +1,20 @@
-import { Component, OnInit } from "@angular/core";
+import {Component, OnInit} from '@angular/core';
 import {
   AbstractControl,
   FormBuilder,
   FormGroup,
   Validators,
-} from "@angular/forms";
+} from '@angular/forms';
 
-import { Login } from "./login.model";
-import { HttpClient, HttpErrorResponse } from "@angular/common/http";
-import { MatSnackBar } from "@angular/material";
-import { Router, ActivatedRoute } from "@angular/router";
+import {Login} from './login.model';
+import {HttpClient, HttpErrorResponse} from '@angular/common/http';
+import {MatSnackBar} from '@angular/material';
+import {Router, ActivatedRoute} from '@angular/router';
 
 @Component({
-  selector: "app-login",
-  templateUrl: "./login.component.html",
-  styleUrls: ["./login.component.css"],
+  selector: 'app-login',
+  templateUrl: './login.component.html',
+  styleUrls: ['./login.component.css'],
 })
 export class LoginComponent implements OnInit {
   /* --------------------------------- Fields --------------------------------- */
@@ -36,12 +36,12 @@ export class LoginComponent implements OnInit {
 
   ngOnInit(): void {
     this.httpService
-      .get("../../../../../assets/json/sampleData.json")
+      .get('../../../../../assets/json/sampleData.json')
       .subscribe(
         (data: any) => {
           this.globalArray = data;
           console.log(
-            "HomeComponent -> ngOnInit -> this.globalArray ",
+            'HomeComponent -> ngOnInit -> this.globalArray ',
             this.globalArray
           );
         },
@@ -58,10 +58,10 @@ export class LoginComponent implements OnInit {
   /* --------------------------------- Getters -------------------------------- */
 
   get email(): AbstractControl {
-    return this.loginForm.get("email");
+    return this.loginForm.get('email');
   }
   get password(): AbstractControl {
-    return this.loginForm.get("password");
+    return this.loginForm.get('password');
   }
 
   /* ----------------------------- Custom Methods ----------------------------- */
@@ -80,14 +80,15 @@ export class LoginComponent implements OnInit {
       loginCredentials.loginCredentials.password ==
         this.globalArray.loginCredentials.password
     ) {
-      alert("login Sucess");
-      this.router.navigate(["dashboard"], {
+      // alert("login Sucess");
+      this.router.navigate(['dashboard'], {
         queryParams: {
           userName: this.globalArray.loginCredentials.userName,
         },
       });
+      this.openSnackBar('Logged in successfully', 'Ok');
     } else {
-      this.openSnackBar("In valid email or password", "Ok");
+      this.openSnackBar('In valid email or password', 'Ok');
     }
   }
 
